@@ -70,7 +70,7 @@ for i, (map_name, color) in enumerate(zip(ordered_maps, map_colors)):
 ax.set_xlim(0, 7)
 ax.set_ylim(0, 1)
 ax.axis('off')
-plt.title("Map Confidence Spectrum\nT1 vs T2 (KA Team 1 POV)", fontsize=14, weight='bold')
+plt.title("Map Confidence Spectrum\nT1 vs T2", fontsize=14, weight='bold')
 # subtitle_text = AnchoredText('Sampled from official scrims', loc='lower center', prop=dict(size=10), frameon=False)
 # plt.gca().add_artist(subtitle_text)
 plt.tight_layout()
