@@ -5,6 +5,9 @@ This is a simple CLI tool that helps Valorant analysts visualize **map matchup c
 
 It outputs a **7-box color spectrum** showing which maps are weak (red), neutral (white), and strong (green) for your team based on the upcoming opponent.
 
+This forked version is for analyzing Kings Ascend Season 2.
+
+Original code from Ominous from Wolves Esports. Below are the original README description.
 ---
 
 ## 📦 Requirements

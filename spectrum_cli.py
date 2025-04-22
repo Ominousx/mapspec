@@ -69,7 +69,7 @@ for i, (map_name, color) in enumerate(zip(ordered_maps, map_colors)):
 ax.set_xlim(0, 7)
 ax.set_ylim(0, 1)
 ax.axis('off')
-plt.title("Map Confidence Spectrum (Wolves POV)", fontsize=14, weight='bold')
+plt.title("Map Confidence Spectrum (KA Team 1 POV)", fontsize=14, weight='bold')
 plt.tight_layout()
 plt.savefig(args.output, dpi=300)
 plt.show()
