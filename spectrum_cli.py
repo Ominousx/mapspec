@@ -51,13 +51,13 @@ ordered_maps = [x[0] for x in sorted_maps]
 
 # === COLOR SCHEME ===
 colors = {
-    1: "#fd2659",  # worst
-    2: "#f96a8c",
-    3: "#f6aebf",
+    1: "#fefe00",  # worst
+    2: "#f6f6a1",
+    3: "#f4f4ca",
     4: "#f2f2f2",  # neutral
-    5: "#baf6e8",
-    6: "#81fbdd",
-    7: "#49ffd3"   # best
+    5: "#caf4f4",
+    6: "#a2f6f6",
+    7: "#01ffff"   # best
 }
 map_colors = [colors[ranked_maps[m]] for m in ordered_maps]
 
