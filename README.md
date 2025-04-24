@@ -53,7 +53,7 @@ If you're using Google Colab:
                 └── blg.csv
 ```
 
-2. Open `mapspec_colab.ipynb` from [@nolozy’s fork](https://github.com/nolozy/mapspec)
+2. Open `Map-Confidence-Spectrum-for-GoogleColab.ipynb` from [@nolozy’s fork](https://github.com/nolozy/mapspec)
 
 3. Run the notebook to generate spectrum chart with **Japanese labels**.
 
