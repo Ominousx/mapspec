@@ -42,20 +42,25 @@ python3 spectrum_cli.py --wolves wolves.csv --opponent geng.csv --output spectru
 
 If you're using Google Colab:
 
-1. Create this folder structure in Google Drive:
+1. Create this folder structure in your **Google Drive**:
 ```
 /My Drive
 └── Colab Notebooks
-    └── mapspec
+    ├── Map-Confidence-Spectrum-for-GoogleColab.ipynb
+    └── mapspec/
         ├── wolves.csv
         └── teams/
             └── blg/
                 └── blg.csv
 ```
 
-2. Open `Map-Confidence-Spectrum-for-GoogleColab.ipynb` from [@nolozy’s fork](https://github.com/nolozy/mapspec)
+> 📌 **Important:** Folder name and CSV file name (excluding `.csv`) must match exactly.  
+> Example: `/teams/blg/blg.csv`, `/teams/drg/drg.csv`, `/teams/xlg/xlg.csv`
 
-3. Run the notebook to generate spectrum chart with **Japanese labels**.
+2. Open `Map-Confidence-Spectrum-for-GoogleColab.ipynb`  
+   from [@nolozy’s fork](https://github.com/nolozy/mapspec)
+
+3. Run the notebook to generate a spectrum chart with **Japanese labels**.
 
 ---
 
