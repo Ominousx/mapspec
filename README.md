@@ -6,9 +6,7 @@ You can run it via:
 - ✅ Python CLI (local use)
 - ✅ Google Colab (with Japanese support via `japanize-matplotlib`)
 
-This forked version is for analyzing Kings Ascend Season 2.
 
-Original code from Ominous from Wolves Esports. Below are the original README description.
 ---
 
 ## 📊 Example: Confidence Spectrum
