@@ -1,73 +1,75 @@
+## 🇬🇧 MapSpec – Veto Prep Tool for Valorant (with JP support)
 
-# 🧠 Map Confidence Spectrum (Wolves POV CLI Tool)
+MapSpec is a pre-match **map confidence spectrum generator** for Valorant. It helps analysts make smart **pick/ban decisions** by comparing historical map performance between two teams.
 
-This is a simple CLI tool that helps Valorant analysts visualize **map matchup confidence** between their team and an upcoming opponent — from their team's point of view.
-
-It outputs a **7-box color spectrum** showing which maps are weak (red), neutral (white), and strong (green) for your team based on the upcoming opponent.
+You can run it via:
+- ✅ Python CLI (local use)
+- ✅ Google Colab (with Japanese support via `japanize-matplotlib`)
 
 This forked version is for analyzing Kings Ascend Season 2.
 
 Original code from Ominous from Wolves Esports. Below are the original README description.
 ---
 
-## 📦 Requirements
+## 📊 Example: Confidence Spectrum
+<img src="spectrum_example.png" width="600" />
 
-- Python 3.x
-- pandas
-- matplotlib
+---
 
-Install requirements:
+## 👤 Authors
+
+| Name | GitHub | Role |
+|------|--------|------|
+| **Sushant Jha** | [@Ominousx](https://github.com/Ominousx) | 🧠 Project Lead / CLI Developer |
+| **nolozy** | [@nolozy](https://github.com/nolozy) | 🇪・ Colab Notebook + 🇯🇵 Localization |
+
+---
+
+## 🛠️ Installation (Local CLI)
 
 ```bash
-pip install pandas matplotlib
+git clone https://github.com/Ominousx/mapspec.git
+cd mapspec
+pip install -r requirements.txt
+```
+
+Then run:
+
+```bash
+python3 spectrum_cli.py --wolves wolves.csv --opponent geng.csv --output spectrum.png
 ```
 
 ---
 
-## 🚀 Usage
+## ☁️ Google Colab (JP-ready)
 
-```bash
-python3 spectrum_cli.py --wolves your_team.csv --opponent opponent_team.csv [--output filename.png]
+If you're using Google Colab:
+
+1. Create this folder structure in your **Google Drive**:
+```
+/My Drive
+└── Colab Notebooks
+    ├── Map-Confidence-Spectrum-for-GoogleColab.ipynb
+    └── mapspec/
+        ├── wolves.csv
+        └── teams/
+            └── blg/
+                └── blg.csv
 ```
 
-### ✅ Example (Wolves vs DRG)
+> 📌 **Important:** Folder name and CSV file name (excluding `.csv`) must match exactly.  
+> Example: `/teams/blg/blg.csv`, `/teams/drg/drg.csv`, `/teams/xlg/xlg.csv`
 
-```bash
-python3 spectrum_cli.py --wolves wolves.csv --opponent drg.csv --output spectrum_drg.png
-```
+2. Open `Map-Confidence-Spectrum-for-GoogleColab.ipynb`  
+   from [@nolozy’s fork](https://github.com/nolozy/mapspec)
 
----
-
-## 📁 CSV Format
-
-Each team’s CSV should look like this:
-
-| Map      | Picks | Bans | Wins | Losses |
-|----------|-------|------|------|--------|
-| Pearl    | 3     | 1    | 3    | 0      |
-| Haven    | 2     | 0    | 2    | 0      |
-| Icebox   | 2     | 1    | 1    | 1      |
-| Split    | 0     | 2    | 0    | 0      |
-| Fracture | 1     | 2    | 0    | 1      |
-| Lotus    | 2     | 0    | 2    | 0      |
-| Ascent   | 1     | 3    | 0    | 1      |
-
-- Map names must match exactly: Pearl, Haven, Icebox, Split, Fracture, Lotus, Ascent
-- Win rate, picks, and bans are used to calculate the confidence score
+3. Run the notebook to generate a spectrum chart with **Japanese labels**.
 
 ---
 
-## 🎨 Output
+## 🌐 Language Support
 
-A horizontal bar showing 7 maps:
-- Red = low confidence
-- White = even/neutral
-- Green = high confidence
-
-Output is saved as a `.png` file (default: `map_confidence_spectrum.png`)
-
----
-
-## 🤝 Reusable for Any Team
-
-Just set `--wolves` to your own team file. The confidence spectrum will always reflect your POV.
+| Language | Interface | Notes |
+|----------|-----------|-------|
+| English  | ✅ CLI + README | Default |
+| Japanese | ✅ Colab notebook (`japanize-matplotlib`) | Developed by [@nolozy](https://github.com/nolozy) |
