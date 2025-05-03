@@ -6,6 +6,7 @@ You can run it via:
 - ✅ Python CLI (local use)
 - ✅ Google Colab (with Japanese support via `japanize-matplotlib`)
 
+
 ---
 
 ## 📊 Example: Confidence Spectrum

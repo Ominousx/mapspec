@@ -3,11 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import argparse
 
+plt.rcParams['font.family'] = 'SimHei'  # 设置字体为SimHei以支持中文显示
 # === CLI ARGUMENT PARSER ===
-parser = argparse.ArgumentParser(description="Generate map confidence spectrum from Wolves POV")
-parser.add_argument('--wolves', type=str, default='wolves.csv', help='Path to Wolves CSV file')
-parser.add_argument('--opponent', type=str, required=True, help='Path to opponent CSV file')
-parser.add_argument('--output', type=str, default='map_confidence_spectrum.png', help='Output image file name')
+parser = argparse.ArgumentParser(description="从狼队视角生成地图自信度频谱")
+parser.add_argument('--wolves', type=str, default='wolves.csv', help='狼队 CSV 文件的路径')
+parser.add_argument('--opponent', type=str, required=True, help='对手 CSV 文件的路径')
+parser.add_argument('--output', type=str, default='map_confidence_spectrum.png', help='输出的图片文件名')
 args = parser.parse_args()
 
 # === SCORING FUNCTION ===
@@ -69,7 +70,7 @@ for i, (map_name, color) in enumerate(zip(ordered_maps, map_colors)):
 ax.set_xlim(0, 7)
 ax.set_ylim(0, 1)
 ax.axis('off')
-plt.title("Map Confidence Spectrum (Wolves POV)", fontsize=14, weight='bold')
+plt.title("地图自信度频谱 （WOL 视角）", fontsize=14, weight='bold')
 plt.tight_layout()
 plt.savefig(args.output, dpi=300)
 plt.show()
